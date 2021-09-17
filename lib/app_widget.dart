@@ -16,7 +16,11 @@ class AppWidget extends StatelessWidget {
                     brightness: AppController.instance.isDarkThemme ? Brightness.dark : Brightness.light
                     ),
                     debugShowCheckedModeBanner: false,
-                  home: LoginPage()
+                  initialRoute: '/',
+                  routes: {
+                    '/': (context) => LoginPage(),
+                    '/home': (context) => HomePage(),
+                  },
                 );
       });
   }
